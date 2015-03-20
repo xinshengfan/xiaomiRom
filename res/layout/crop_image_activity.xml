@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/texture" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.edmodo.cropper.CropImageView android:id="@id/CropImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:guidelines="off" custom:fixAspectRatio="true" custom:aspectRatioX="1" custom:aspectRatioY="1" xmlns:custom="http://schemas.android.com/apk/res-auto" />
+    </RelativeLayout>
+    <Button android:textColor="@color/title_color" android:id="@id/confirm" android:background="@drawable/click_btn_bg_trans" android:layout_width="fill_parent" android:layout_height="@dimen/click_button_h" android:text="@string/confirm" android:layout_alignParentBottom="true" />
+</LinearLayout>

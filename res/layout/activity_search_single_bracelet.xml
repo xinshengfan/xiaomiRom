@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/search_single_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color_black" >
+
+    <ImageButton
+        android:id="@id/toggle_display_mode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20.0dip"
+        android:background="@color/trans"
+        android:src="@drawable/ab_helper"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/search_devices_title"
+        style="@style/InfoTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_bracelet" />
+
+    <TextView
+        android:id="@id/search_devices_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_devices_title"
+        android:gravity="center"
+        android:paddingTop="@dimen/info_content_margin_top"
+        android:text="@string/search_devices_info"
+        android:textColor="@color/content_color"
+        android:textSize="@dimen/info_content_size" />
+
+    <RelativeLayout
+        android:id="@id/search_single_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_devices_info"
+        android:layout_marginBottom="100.0dip"
+        android:background="@color/bg_color_black" >
+
+        <cn.com.smartdevices.bracelet.chart.LinePieChartView
+            android:id="@id/searching_pie_chart"
+            android:layout_width="@dimen/line_pie_width"
+            android:layout_height="@dimen/line_pie_width"
+            android:layout_centerInParent="true"
+            android:background="@color/bg_color_black" />
+
+        <ImageView
+            android:id="@id/search_devices_mili_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/searching_mili_icon" />
+    </RelativeLayout>
+
+    <com.xiaomi.hm.view.GifView
+        android:id="@id/bracelet_hand_gifview"
+        android:layout_width="222.6dip"
+        android:layout_height="401.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="120.0dip"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@id/search_devices_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/bottom_btn_maring_bottom"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:paddingBottom="28.0dip"
+        android:textColor="@color/normal"
+        android:textSize="@dimen/info_content_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@id/search_devices_not_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/info_bottom_margin_bottom"
+        android:clickable="true"
+        android:paddingBottom="28.0dip"
+        android:text="@string/device_not_response"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/info_content_size"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/search_single_device_list_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/title_color"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/home_back"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/action_bar_h"
+            android:background="@color/wheel_band_bg"
+            android:clickable="true"
+            android:drawableLeft="@drawable/btn_prev_selector_2"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:text="@string/device_list"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/main_ui_title_size" />
+
+        <ListView
+            android:id="@id/device_list_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/toggle_display_mode_btn"
+            android:cacheColorHint="@color/trans"
+            android:divider="@color/trans"
+            android:dividerHeight="0.0dip" />
+    </LinearLayout>
+
+</RelativeLayout>

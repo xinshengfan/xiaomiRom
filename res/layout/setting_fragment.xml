@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_ui_bg" >
+
+    <cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@id/fragment_setting_sliding_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        sothree:dragView="@id/dragView"
+        sothree:panelHeight="243.0dip"
+        sothree:paralaxOffset="0.0dip"
+        sothree:shadowHeight="0.0dip" >
+
+        <include
+            android:id="@id/mili_top_bar"
+            layout="@layout/mili_top_bar" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@id/device_find_bracelet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@id/info_person_signature_value"
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/find_bracelet" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_set_goal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_person_goal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_set_goal_text"
+                        style="@style/ListItemValueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/set_goal_step" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_light_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="0.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="0.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/light_color" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_light_color_txt"
+                        style="@style/ListItemValueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/blue" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_wear_hand"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wear_hand" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_wear_hand_text"
+                        style="@style/ListItemValueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/left_hand" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_unlock_screen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unlock_screen" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_unlock_screen_text"
+                        style="@style/ListItemValueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include
+                    android:id="@id/device_unlock_split"
+                    layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/incoming_call_notify"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/incoming_call_notify" />
+
+                        <TextView
+                            style="@style/ListItemValueText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/incoming_call_notify_tips" />
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@id/incoming_call_notify_switch"
+                        android:layout_width="40.0dip"
+                        android:layout_height="21.0dip"
+                        android:layout_gravity="center"
+                        android:background="@drawable/switch_track_enable"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:switchMinWidth="38.0dip"
+                        android:textOff=""
+                        android:textOn=""
+                        android:thumb="@drawable/switch_thumb"
+                        android:thumbTextPadding="10.0dip"
+                        android:track="@drawable/switch_track_trans" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_weixin_enter_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_pop_weixin_enter" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_weixin_enter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/main_ui_content_color"
+                        android:textSize="@dimen/info_content_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="9.0dip"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_unbind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@id/mili_rebind_tips"
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unbind" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/ListItemValueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="9.0dip"
+                        android:text="" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+
+                <include layout="@layout/split_line_with_margin" />
+
+                <LinearLayout
+                    android:id="@id/device_firmware_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:layout_marginTop="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin"
+                    android:paddingTop="6.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/ListItemTitleText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firmware_version" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/device_firmware_version_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/main_ui_content_color"
+                        android:textSize="@dimen/info_content_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="9.0dip"
+                        android:src="@drawable/ic_indicator_right_arrow"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/mask_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#90ffffff"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/item_height" >
+
+                <LinearLayout
+                    android:id="@id/device_unbind_in_mask"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/stroke_width_minus"
+                    android:background="@drawable/bg_item"
+                    android:clickable="true"
+                    android:minHeight="@dimen/item_height"
+                    android:paddingBottom="6.0dip"
+                    android:paddingLeft="@dimen/mili_margin"
+                    android:paddingRight="@dimen/mili_margin" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@id/mili_rebind_tips_in_mask"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3.5dip"
+                            android:singleLine="true"
+                            android:text="@string/bind_new_mili"
+                            android:textColor="@color/main_ui_title_color"
+                            android:textSize="@dimen/main_ui_item_title_size" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="9.0dip"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/main_ui_content_color"
+                        android:textSize="13.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/ic_indicator_right_arrow"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout>
+
+</FrameLayout>

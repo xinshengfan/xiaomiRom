@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color_grey"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@id/multi_devices_err_title"
+        style="@style/InfoTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bracelet_not_found_title" />
+
+    <TextView
+        android:id="@id/bracelet_not_found_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/multi_devices_err_title"
+        android:gravity="center"
+        android:paddingLeft="@dimen/info_content_margin_left"
+        android:paddingRight="@dimen/info_content_margin_left"
+        android:paddingTop="@dimen/info_content_margin_top"
+        android:text="@string/bracelet_not_found_info"
+        android:textColor="@color/content_color"
+        android:textSize="@dimen/info_content_size" />
+
+    <ImageView
+        android:id="@id/bracelet_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bracelet_not_found_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45.0dip"
+        android:src="@drawable/bracelet_charge" />
+
+    <TextView
+        android:id="@id/donot_bind_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="invisible"
+        android:paddingBottom="30.0dip"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/info_content_size" />
+
+    <Button
+        android:id="@id/bracelet_not_found_get_help"
+        android:layout_width="@dimen/click_button_w"
+        android:layout_height="@dimen/click_button_h"
+        android:layout_above="@id/donot_bind_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18.0dip"
+        android:layout_marginTop="11.0dip"
+        android:background="@drawable/click_btn_bg"
+        android:text="@string/get_help"
+        android:textColor="@color/normal"
+        android:textSize="@dimen/click_button_text_size" />
+
+    <Button
+        android:id="@id/bracelet_not_found_search_again"
+        android:layout_width="@dimen/click_button_w"
+        android:layout_height="@dimen/click_button_h"
+        android:layout_above="@id/bracelet_not_found_get_help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/multi_devices_txt_space"
+        android:background="@drawable/click_btn_bg"
+        android:text="@string/search_bracelet_again"
+        android:textColor="@color/normal"
+        android:textSize="@dimen/click_button_text_size" />
+
+</RelativeLayout>

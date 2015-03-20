@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/topStyle" >
+
+        <Button style="@style/uiBackButton" />
+
+        <TextView
+            android:id="@+id/tv_search_over_title"
+            style="@style/titleText"
+            android:text="@string/search_bracelet" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_search_over_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="已找到小米手环"
+        android:textColor="@color/ui_relation_our_text_1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_search_over_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/ui_search_over_xiaomi"
+        android:textColor="#777777"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imv_search_over"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_search_over_research"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_indicator_right_arrow"
+        android:gravity="right"
+        android:text="@string/search_bracelet_again"
+        android:textColor="#555555"
+        android:textSize="15sp" />
+
+</LinearLayout>

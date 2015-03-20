@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/dynamic_header"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:background="@color/bg_color_black" >
+
+    <FrameLayout
+        android:id="@id/header_nav_left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color_black"
+        android:paddingLeft="13.0dip"
+        android:paddingRight="20.0dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/btn_statistic" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@id/dynamic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="15.5sp" />
+
+    <FrameLayout
+        android:id="@id/header_nav_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:background="@color/bg_color_black"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="13.0dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:background="@null"
+            android:src="@drawable/btn_more" />
+    </FrameLayout>
+
+</FrameLayout>

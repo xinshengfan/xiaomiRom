@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout style="@style/topStyle" >
+
+        <Button style="@style/uiBackButton" />
+
+        <TextView
+            android:id="@+id/tv_search_list_title"
+            style="@style/titleText"
+            android:text="@string/search_bracelet" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/jbshape"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/button_scan"
+            android:onClick="researchDevice" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="#6cbb52" />
+
+        <ListView
+            android:id="@+id/lv_search_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

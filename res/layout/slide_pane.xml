@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color_black" >
+
+    <cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@id/sliding_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color_black"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="bottom"
+        sothree:dragView="@id/dragView"
+        sothree:panelHeight="248.0dip"
+        sothree:paralaxOffset="0.0dip"
+        sothree:shadowHeight="0.0dip" >
+
+        <FrameLayout
+            android:id="@id/backView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_color_black"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@id/msgDV"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:background="@color/bg_color_black"
+                android:clickable="false"
+                android:focusable="false"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:src="@drawable/pulldown" />
+
+                <ProgressBar
+                    android:id="@id/progressBar1"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4.0dip"
+                    android:indeterminateDrawable="@drawable/custom_progress_draw"
+                    android:indeterminateDuration="700"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="40.0dip"
+                    android:background="@color/bg_color_black"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@id/tMsg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxxxxx"
+                        android:textColor="@color/alert_color"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:id="@id/tMsg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.8"
+                        android:text="xaaaaaaaaaa"
+                        android:textColor="@color/alert_color"
+                        android:textSize="10.0sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@id/container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_color_black"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <include layout="@layout/fragment_dynamic_header" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/dragView"
+            android:layout_width="fill_parent"
+            android:layout_height="470.0dip"
+            android:background="@color/bg_color_black"
+            android:clickable="false"
+            android:focusable="false" >
+
+            <View
+                android:id="@id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0px"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/mili_margin"
+                android:layout_marginRight="@dimen/mili_margin"
+                android:background="@color/bg_color_black" />
+
+            <cn.com.smartdevices.bracelet.lua.MyListView
+                android:id="@id/lv2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_color_black"
+                android:clickable="false"
+                android:divider="@null"
+                android:dividerHeight="0.0dip"
+                android:focusable="false"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:id="@id/listMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="36.0dip"
+                android:background="#e059a712"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@id/blankDV"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="false"
+                android:focusable="false" >
+
+                <ListView
+                    android:id="@id/fakelistView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0.0dip" />
+            </FrameLayout>
+        </FrameLayout>
+    </cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_black"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/pic_preparingupdate_xm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/xiaomi_reading_upgrade"
+                android:textColor="#ffffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

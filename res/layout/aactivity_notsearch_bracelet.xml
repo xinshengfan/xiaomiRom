@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/topStyle" >
+
+        <Button style="@style/uiBackButton" />
+
+        <TextView
+            android:id="@+id/tv_search_not_find_title"
+            style="@style/titleText"
+            android:text="@string/search_bracelet" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_search_notfind_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:gravity="left"
+        android:text="没有找到小米手环"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_item_solid_big"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/arrow_multi_choice"
+            android:drawablePadding="10dp"
+            android:text="请确认咕咚智能手环电源已开启"
+            android:textColor="#7f8181"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/arrow_multi_choice"
+            android:drawablePadding="10dp"
+            android:text="请确认配件在手机附近"
+            android:textColor="#7f8181"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/arrow_multi_choice"
+            android:drawablePadding="10dp"
+            android:text="请确认手机蓝牙已开启"
+            android:textColor="#7f8181"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_notfind_research"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/btn_orngebg_selector"
+            android:onClick="research"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/search_bracelet_again"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
